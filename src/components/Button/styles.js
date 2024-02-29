@@ -1,21 +1,30 @@
-import styled, {css}  from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ButtonContainer = styled.button`
     background: #565656;
-    border-radius: 22px;
+    border-radius: 20px;
     position: relative;
-
+    border: none;
+    margin: 0px 5px;
     color: #FFFFFF;
     padding: 2px 12px;
     min-width: 120px;
     width: 100%;
     
-    ${({variant}) => variant !== "primary" && css`
+    ${({ variant }) => variant !== "primary" && css`
         min-width: 167px;
         height: 33px;
         
         background: #E4105D;
+        border: none;
+        
+        &:hover {
+            opacity:0.9;
+            cursor: pointer;
+        }
 
+
+        
         &::after {
             content: '';
             position: absolute;

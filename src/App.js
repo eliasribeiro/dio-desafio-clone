@@ -6,18 +6,20 @@ import {
 import { Feed } from "./pages/feed";
 
 import { Home } from './pages/home'
-import { Login } from './pages/login'
+import { Login } from './pages/usuario/login'
+import { Cadastro } from './pages/usuario/cadastro'
 import { GlobalStyle } from './styles/global';
 
 function App() {
   return (
     <Router>
-     <GlobalStyle />
-     <Routes>
+      <GlobalStyle />
+      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/usuario/login" element={<Login />} />
+        <Route path="/usuario/cadastro" element={<Cadastro />} />
         <Route path="/feed" element={<Feed />} />
-     </Routes >
+      </Routes >
     </Router>
   );
 }
